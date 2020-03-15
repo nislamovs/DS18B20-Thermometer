@@ -65,6 +65,8 @@ Also there is a constant value in code, named `calcConst`:
 
 ![calConst](docs/calcConst.png) <!-- .element height="50%" width="50%" -->
 
+It is needed to use all gauge of the meter. If You will use another type of meter, You should adjust this value.
+
 And don't forget to download DS18B20 library in Your Arduino IDE. I used `DS18B20` library by Mathias Munk Hansen.
 More info about it [here][ds18b20]. 
  
