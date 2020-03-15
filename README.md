@@ -44,7 +44,7 @@ Few photos:
 
 ![Schematic3](docs/photos/IMG_20200315_071854.jpg) <!-- .element height="50%" width="50%" -->
 
-#####Gauges:
+##### Gauges:
 
 The gauge for panel meter is [here][photos]. 
 
@@ -75,4 +75,5 @@ More info about it [here][ds18b20].
    [photos]: <https://github.com/nislamovs/DS18B20-Thermometer/tree/master/docs/photos/>
    [gauge]: <https://github.com/nislamovs/DS18B20-Thermometer/blob/master/docs/Front_panel_image.png>
    [ds18b20]: <https://github.com/matmunk/DS18B20>
+   [scale_master]: <https://soulmare.github.io/scale_master/#>
    
