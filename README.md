@@ -44,15 +44,15 @@ Few photos:
 
 ![Schematic3](docs/photos/IMG_20200315_071854.jpg) <!-- .element height="50%" width="50%" -->
 
-##### Gauges:
+#### Gauges:
 
 The gauge for panel meter is [here][photos]. 
 
-When you will print them, set scale to 103%. The gauges were drawn in [Scale Master][scale_master] and exported as PNG with 600 dpi quality.
+When You will print them, set scale to 103%. The gauges were drawn in [Scale Master][scale_master] and exported as PNG with 600 dpi quality.
 
 Circuit diagram:
 
-![circuit_diagram](docs/photos/circuit_diagram.png) <!-- .element height="50%" width="50%" -->
+![circuit_diagram](schematics/schematic.png) <!-- .element height="50%" width="50%" -->
 
 [Back](#summary)
 
