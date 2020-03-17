@@ -1,7 +1,7 @@
 # DS18B20-Thermometer
 DS18B20 Thermometer with ammeter as temperature indicator.
 
-![Device](docs/photos/IMG_20200315_071744.jpg) <!-- .element height="50%" width="50%" -->
+![Device](docs/photos/IMG_20200317_150118.jpg) <!-- .element height="50%" width="50%" -->
 
 ### Summary:
 
