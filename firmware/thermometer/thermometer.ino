@@ -7,24 +7,43 @@
 #define calcConst 8.3
 
 DS18B20 ds(DS18B20Pin);
+int curVal;
+boolean curTempSign;
 
 void setup() {
   Serial.begin(9600);
+  curVal = 0;
+  curTempSign = false;    //false -> negative; true positive or zero
 }
 
 void loop() {
   ds.doConversion();
   float temp = ds.getTempC();
-  int val = (int)(calcConst * temp);
-  if (val > 255 || val < -255) val = 255;
+  int val = abs((int)(calcConst * temp));
 
-if ((int)temp < 0) {
-  analogWrite(negValuePin, val);
-  analogWrite(posValuePin, 0);
-} else {
-  analogWrite(posValuePin, val);
-  analogWrite(negValuePin, 0);
-}
+  if (val > 255) val = 255;
+
+//Necessary to except thermometer glitch values
+
+  if (curVal == 0) {
+    curTempSign = (int)temp >= 0;
+    curVal = val;
+  } else {
+    if (abs(curVal - val) < 5)
+      curVal = val;
+  }
+////////////////////////////////////////////////
+
+  if ( !( ((int)temp >= 0) != curTempSign && curVal >= 20) ) { // Necessary to except thermometer glitch values as well
+    if ((int)temp < 0) {
+      analogWrite(negValuePin, curVal);
+      analogWrite(posValuePin, 0);
+    } else {
+      analogWrite(posValuePin, curVal);
+      analogWrite(negValuePin, 0);
+    }
+    curTempSign = (int)temp >= 0;
+  }
   
   Serial.print("Temperature: ");
   Serial.print(temp);
